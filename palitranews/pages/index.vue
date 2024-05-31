@@ -30,7 +30,7 @@ const page = ref(1)
 const pagination = ref()
 const route = useRoute()
 const fetchData = () => {
-  axios.get('http://localhost:8000/products?page=' + (route.query.page || 1), {
+  axios.get('http://localhost:8003/products?page=' + (route.query.page || 1), {
     params: {
       page: page.value
     }

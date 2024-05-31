@@ -50,7 +50,7 @@ const product = ref([])
 
 const route = useRoute()
 
-axios.get('http://localhost:8000/products/' + route.params.id)
+axios.get('http://localhost:8003/products/' + route.params.id)
     .then(response => {
       product.value = response?.data
     })
