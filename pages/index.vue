@@ -11,20 +11,22 @@
             <img :src="product.thumb" :alt="product.imageAlt"
                  class="h-full w-full object-cover object-center group-hover:opacity-75"/>
           </div>
-          <h3 class="mt-4 text-xl font-mono  dark:text-gray-400">{{ product.name }}</h3>
-          <p class="mt-1 text-lg font-medium text-black">{{ product.price }}</p>
+          <h3 class="mt-4 text-xl font-mono  dark:text-gray-400">  {{ product.name }}</h3>
+          <div class="flex ...text-lg text-black"> <p class="pr-2 text-blue-700 ">₾</p> {{product.price}}</div>
         </a>
       </div>
     </div>
-
-    <div class="flex ... ">
-      <div class="grow w-80 ...">
+    <div class="flex flex-row">
+      <div class="basis-1/4"></div>
+      <div class="basis-1/2 pl-52 pb-16">
         <UPagination v-model="page" :page-count="pagination?.total" :total="pagination?.total" :to="(page: number) => ({
       query: { page },
     })"/>
       </div>
-
+      <div class="basis-1/4"></div>
     </div>
+
+
 
   </div>
 </template>
